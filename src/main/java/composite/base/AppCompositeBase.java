@@ -8,14 +8,13 @@ public class AppCompositeBase {
 		
 		ControleRemoto controleDaSala = new ControleRemoto();
 		
-		controleDaSala.setFornecedorDeEnergia(pilhaAlcalina);
-		controleDaSala.setFornecedorDeEnergia(pilhaNormal);
-		
-		//Código da atividade:
+//		controleDaSala.setFornecedorDeEnergia(pilhaAlcalina);
+//		controleDaSala.setFornecedorDeEnergia(pilhaNormal);
 		
 		FornecedorComposite fornecedorComposite = new FornecedorComposite();
 	    fornecedorComposite.adicionarEnergia(pilhaNormal);
 	    fornecedorComposite.adicionarEnergia(pilhaAlcalina);
+	    
 		
 		controleDaSala.setFornecedorDeEnergia(fornecedorComposite);
 		
@@ -23,6 +22,15 @@ public class AppCompositeBase {
 		controleDaSala.trocarCanal(72);
 		controleDaSala.trocarCanal(25);
 		controleDaSala.desligar();
+		controleDaSala.ligar();
+		controleDaSala.trocarCanal(72);
+		controleDaSala.trocarCanal(25);
+		controleDaSala.desligar();
+		controleDaSala.ligar();
+		controleDaSala.trocarCanal(72);
+		controleDaSala.trocarCanal(25);
+		controleDaSala.desligar();
+		
 		
 		
 		
