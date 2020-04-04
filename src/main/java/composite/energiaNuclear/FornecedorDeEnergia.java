@@ -1,4 +1,4 @@
-package composite.base;
+package composite.energiaNuclear;
 
 public interface FornecedorDeEnergia {
 	
