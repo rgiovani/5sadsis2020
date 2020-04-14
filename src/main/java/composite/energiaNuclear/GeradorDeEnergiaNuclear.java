@@ -1,7 +1,10 @@
 package composite.energiaNuclear;
 
-public interface GeradorDeEnergiaNuclear {
+public class GeradorDeEnergiaNuclear {
 	
-	double energizar();
+	public double energizar() {
+		System.out.println("Gerador de energia nuclear energizando..........");
+		return 0.0;
+	}
 	
 }

@@ -1,20 +1,17 @@
 package composite.energiaNuclear;
 
-public class EnergiaAdapter implements GeradorDeEnergiaNuclear{
-	private FornecedorDeEnergia fornecedorDeEnergia;
+public class EnergiaAdapter implements FornecedorDeEnergia{
+	private GeradorDeEnergiaNuclear fornecedorDeEnergia;
 	
-	public EnergiaAdapter(FornecedorDeEnergia fornecedorDeEnergia) {
+	public EnergiaAdapter(GeradorDeEnergiaNuclear fornecedorDeEnergia) {
 		this.fornecedorDeEnergia = fornecedorDeEnergia;
 	}
-	
+
 	@Override
-	public double energizar() {
-		System.out.println("Energia nuclear energizando...");
-		return fornecedorDeEnergia.fornecer();
+	public double fornecer() {	
+		return fornecedorDeEnergia.energizar();
 	}
 	
-	public FornecedorDeEnergia getFornecedorDeEnergia() {
-		return fornecedorDeEnergia;
-	}
+	
 	
 }
