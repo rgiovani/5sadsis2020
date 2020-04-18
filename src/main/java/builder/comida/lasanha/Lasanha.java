@@ -3,17 +3,13 @@ package builder.comida.lasanha;
 import java.util.HashSet;
 import java.util.Set;
 
-import observer.cofre.CofreListener;
-
 public class Lasanha {
 	private Set<LasanhaListener> listeners;
 	
 	private int tamanho;
 	private boolean frango;
 	private boolean presunto;
-	private boolean carne;
 	private boolean legumes;
-	private boolean tomate;
 	
 	private String infoLasanha;
 	
@@ -22,9 +18,7 @@ public class Lasanha {
 		listeners = builder.listeners;
 		frango = builder.frango;
 		presunto = builder.presunto;
-		carne = builder.carne;
 		legumes = builder.legumes;
-		tomate = builder.tomate;
 		infoLasanha = builder.infoLasanha;
 	}
 	
@@ -41,9 +35,7 @@ public class Lasanha {
 		private final int tamanho;
 		private boolean frango = false;
 		private boolean presunto = false;
-		private boolean carne = false;
 		private boolean legumes = false;
-		private boolean tomate = false;
 		private String infoLasanha = "Lasanha";
 		
 		public Builder(int tamanho) {
@@ -70,15 +62,6 @@ public class Lasanha {
 			return this;
 		}
 		
-		public Builder carne() {
-			infoLasanha += " Carne";
-			carne = true;
-			for(LasanhaListener listener: this.listeners) {
-				listener.foiAdicionadoCarne();
-			}
-			return this;
-		}
-		
 		public Builder legumes() {
 			infoLasanha += " Legumes";
 			legumes = true;
@@ -88,14 +71,6 @@ public class Lasanha {
 			return this;
 		}
 		
-		public Builder tomate() {
-			infoLasanha += " Tomate";
-			tomate = true;
-			for(LasanhaListener listener: this.listeners) {
-				listener.foiAdicionadoTomate();
-			}
-			return this;
-		}
 		
 		public Lasanha build() {
 			infoLasanha += ".";

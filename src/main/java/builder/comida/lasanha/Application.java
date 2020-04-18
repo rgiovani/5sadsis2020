@@ -6,8 +6,6 @@ public class Application {
 				.presunto()
 				.frango()
 				.legumes()
-				.carne()
-				.tomate()
 				.build();
 		
 		System.out.println(lasanha.getInfoLasanha());
